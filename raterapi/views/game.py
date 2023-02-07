@@ -3,7 +3,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from gamerraterapi.models import Game, GameCategory, Category
+from raterapi.models import Game, GameCategory, Category
 
 
 class GameView(ViewSet):
@@ -56,6 +56,7 @@ class GameCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ( 'label', )
+
 
 
 class GameSerializer(serializers.ModelSerializer):
