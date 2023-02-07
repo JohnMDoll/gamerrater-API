@@ -1,0 +1,22 @@
+[
+    {
+        "model": "raterapi.gamereview",
+        "pk": 1,
+        "fields": {
+            "review": "This is a great game, I love it! I don't have any friends anymore though.",
+            "player": 1,
+            "game": 1,
+            "date_reviewed": "2022-12-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "raterapi.gamereview",
+        "pk": 2,
+        "fields": {
+            "review": "This game is okay, I don't love it but I don't hate it either.",
+            "player": 2,
+            "game": 1,
+            "date_reviewed": "2022-12-01T12:00:00Z"
+        }
+    }
+]

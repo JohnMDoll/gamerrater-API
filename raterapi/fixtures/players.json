@@ -1,0 +1,18 @@
+[
+    {
+    "model": "raterapi.player",
+    "pk": 1,
+    "fields": {
+    "user": 1,
+    "bio": "I throw dice at my friends"
+    }
+    },
+    {
+    "model": "raterapi.player",
+    "pk": 2,
+    "fields": {
+    "user": 2,
+    "bio": "I love adventure sports cards games and long walks on the beach"
+    }
+    }
+    ]

@@ -1,0 +1,32 @@
+[
+    {
+    "model": "raterapi.game",
+    "pk": 1,
+    "fields": {
+    "title": "Strategy Dice Battle",
+    "designer": "Steve Harvey",
+    "description": "Strategically throw dice at your friends!",
+    "year_released": 2020,
+    "min_number_of_players": 2,
+    "max_number_of_players": 4,
+    "est_play_time": 60,
+    "min_age": 10,
+    "categories": [1,2,10]
+    }
+    },
+    {
+    "model": "raterapi.game",
+    "pk": 2,
+    "fields": {
+    "title": "Sport Adventure Cards",
+    "designer": "Steve Harvey",
+    "description": "A card based sports adventure!",
+    "year_released": 2021,
+    "min_number_of_players": 3,
+    "max_number_of_players": 6,
+    "est_play_time": 90,
+    "min_age": 12,
+    "categories": [3,7,8]
+    }
+    }
+    ]

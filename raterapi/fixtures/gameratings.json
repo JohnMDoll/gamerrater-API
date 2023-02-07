@@ -1,0 +1,42 @@
+[
+    {
+        "model": "raterapi.gamerating",
+        "pk": 1,
+        "fields": {
+            "rating": 6,
+            "player": 1,
+            "game": 1,
+            "date_rated": "2022-10-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "raterapi.gamerating",
+        "pk": 2,
+        "fields": {
+            "rating": 8,
+            "player": 2,
+            "game": 2,
+            "date_rated": "2022-10-02T12:00:00Z"
+        }
+    },
+    {
+        "model": "raterapi.gamerating",
+        "pk": 4,
+        "fields": {
+            "rating": 9,
+            "player": 1,
+            "game": 2,
+            "date_rated": "2022-10-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "raterapi.gamerating",
+        "pk": 3,
+        "fields": {
+            "rating": 2,
+            "player": 2,
+            "game": 1,
+            "date_rated": "2022-10-03T12:00:00Z"
+        }
+    }
+]

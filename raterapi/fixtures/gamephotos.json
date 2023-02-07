@@ -1,0 +1,22 @@
+[
+    {
+        "model": "raterapi.GamePhoto",
+        "pk": 1,
+        "fields": {
+            "image": "/home/jdoll/workspace/python/gamer-rater-API/strategy-dice-battle.png",
+            "player": 1,
+            "game": 1,
+            "date_added": "2022-12-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "raterapi.GamePhoto",
+        "pk": 2,
+        "fields": {
+            "image": "/home/jdoll/workspace/python/gamer-rater-API/sport-adventure-cards-game.png",
+            "player": 2,
+            "game": 2,
+            "date_added": "2022-12-02T12:00:00Z"
+        }
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "model": "auth.User",
+        "pk": 1,
+        "fields": {
+            "username": "user1",
+            "password": "pbkdf2_sha256$36000$yldPMJdncVAX$q3jkDY7ZL+PbwJn+pEAdmT8cVUvO6Ux7NNUwhgs++uM=",
+            "first_name": "user",
+            "last_name": "one",
+            "email": "user1@rater.com"
+        }
+    },
+    {
+        "model": "auth.User",
+        "pk": 2,
+        "fields": {
+            "username": "user2",
+            "password": "pbkdf2_sha256$36000$s3udwV7lzSGf$UvZaUq3plxOQ2QoGm+idM/ld84mF0ruPOAjOysY/C7k=",
+            "first_name": "user",
+            "last_name": "2",
+            "email": "user2@rater.com"
+        }
+    }
+]
