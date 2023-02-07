@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dlv50xn%^zr2eh_m@^@jaaeq8pe_(l7@^j**zfxah&ajw+!3*^'
+SECRET_KEY = 'django-insecure-8)s)f+!55*1k%87=+0s7avn6)1+x5@+s41-5k!xpx((!3xt3q8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'raterapi'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'raterproject.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
 
 TEMPLATES = [
     {
