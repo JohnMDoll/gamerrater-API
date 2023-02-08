@@ -37,6 +37,13 @@ class GameView(ViewSet):
         """
         new_game = Game()
         new_game.description = request.data['description']
+        new_game.title = request.data['title']
+        new_game.min_number_of_players = request.data['min_number_of_players']
+        new_game.max_number_of_players = request.data['max_number_of_players']
+        new_game.est_play_time = request.data['est_play_time']
+        new_game.min_age = request.data['min_age']
+        new_game.year_released = request.data['year_released']
+        new_game.designer = request.data['designer']
         new_game.save()
 
         # categories_selected = request.data['categories']
@@ -55,7 +62,7 @@ class GameView(ViewSet):
 class GameCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ( 'label', )
+        fields = ( 'id', 'label', )
 
 
 

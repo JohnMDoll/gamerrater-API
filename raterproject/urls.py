@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from raterapi.views import GameView
+from raterapi.views import GameView, CategoryView, ReviewView
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
@@ -21,6 +21,8 @@ from raterapi.views import register_user, login_user
 
 router= routers.DefaultRouter(trailing_slash=False)
 router.register(r'games', GameView, 'game')
+router.register(r'categories', CategoryView, 'category')
+router.register(r'reviews', ReviewView, 'review')
 
 urlpatterns = [
     path('register', register_user),
