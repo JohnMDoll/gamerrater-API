@@ -7,7 +7,6 @@ from rest_framework.response import Response
 
 from raterapi.models import Player
 
-
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):

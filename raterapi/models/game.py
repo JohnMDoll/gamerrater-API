@@ -11,3 +11,12 @@ class Game(models.Model):
     est_play_time = models.IntegerField()
     min_age = models.IntegerField()
     categories =  models.ManyToManyField('Category', through='GameCategory')
+    creator = models.ForeignKey('Player', default=1, null=True, on_delete=models.DO_NOTHING, related_name="player_games")
+
+    @property
+    def can_edit(self):
+        return self.__can_edit
+
+    @can_edit.setter
+    def can_edit(self, value):
+        self.__can_edit = value
