@@ -7,7 +7,6 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from raterapi.models import Game, GameCategory, Category, GameReview, Player
 
-
 class GameView(ViewSet):
     """Gamerrater game view"""
 
@@ -74,6 +73,25 @@ class GameView(ViewSet):
         serializer = GameSerializer(new_game)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    def update(self, request, pk):
+        """Handle PUT requests for a game
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        game = Game.objects.get(pk=pk)
+        game.description = request.data['description']
+        game.title = request.data['title']
+        game.min_number_of_players = request.data['min_number_of_players']
+        game.max_number_of_players = request.data['max_number_of_players']
+        game.est_play_time = request.data['est_play_time']
+        game.min_age = request.data['min_age']
+        game.year_released = request.data['year_released']
+        game.designer = request.data['designer']
+        game.creator = Player.objects.get(user=request.auth.user)
+        game.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 class GameCategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -106,5 +124,5 @@ class GameSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'title', 'description', 'designer', 'year_released',
             'min_number_of_players', 'max_number_of_players', 'est_play_time', 'min_age',
-            'categories', 'game_reviews', 'creator', 'can_edit'
+            'categories', 'game_reviews', 'creator', 'can_edit', 'average_rating'
         )

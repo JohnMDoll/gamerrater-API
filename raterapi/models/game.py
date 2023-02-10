@@ -20,3 +20,25 @@ class Game(models.Model):
     @can_edit.setter
     def can_edit(self, value):
         self.__can_edit = value
+
+    @property
+    def average_rating(self):
+        """Average rating calculated attribute for each game"""
+        ratings = self.game_ratings.all()
+
+        # Sum all of the ratings for the game
+        total_rating = 0
+        i = 1
+        for rating in ratings:
+            total_rating += rating.rating
+            i = i+1
+        if i > 1:
+            i = i-1
+            average_rating = total_rating/i
+            return average_rating
+        average_rating = 0
+        return average_rating
+        # Calculate the average and return it.
+        # If you don't know how to calculate averge, Google it.
+        
+        #return the result
